@@ -1,0 +1,21 @@
+programme produitMatrices
+    M, N, P: entier
+    A[M, N]: réel
+    B[N, P]: réel
+    C[M, P]: réel
+debut
+
+    repeter
+        afficher "Entrez le nombre M (max 4) = "
+        saisir M
+    jusqu'à M <= 4 
+
+    repeter
+        afficher "Entrez le nombre N (max 4) = "
+        saisir N
+    jusqu'à N <= 4 
+
+    repeter
+        afficher "Entrez le nombre P (max 4) = "
+        saisir P
+    jusqu'à P <= 4 
