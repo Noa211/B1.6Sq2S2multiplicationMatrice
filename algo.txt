@@ -1,0 +1,57 @@
+programme produitMatrices
+    M, N, P: entier
+    A[N, M]: réel
+    B[P, N]: réel
+    C[P, M]: réel
+    x, y, k: entier
+    val: réel
+debut
+
+    repeter
+        afficher "Entrez le nombre M (max 4) = "
+        saisir M
+    jusqu'à M <= 4 
+
+    repeter
+        afficher "Entrez le nombre N (max 4) = "
+        saisir N
+    jusqu'à N <= 4 
+
+    repeter
+        afficher "Entrez le nombre P (max 4) = "
+        saisir P
+    jusqu'à P <= 4 
+
+    # saisie de la première matrice: A
+    pour x de 0 à N - 1
+        pour y de 0 à M - 1
+            afficher "A(", x, ", ", y, ") = "
+            saisir A[x, y]
+        finpour
+    finpour
+
+    # saisie de la deuxième matrice: B
+    pour x de 0 à P - 1
+        pour y de 0 à N - 1
+            afficher "B(", x, ", ", y, ") = "
+            saisir B[x, y]
+        finpour
+    finpour
+
+    # calcul de la matrice: C
+    pour x de 0 à P - 1
+        pour y de 0 à M - 1
+            C[x, y] <- 0
+            pour k de 0 à N - 1
+                C[x, y] <- C[x, y] + A[k, y] * B[x, k]
+            finpour
+        finpour
+    finpour
+
+    # affichage de la matrice C
+    pour x de 0 à P - 1
+        pour y de 0 à M - 1
+            afficher "C(", x, ", ", y, ") = ", C[x, y]
+        finpour
+    finpour
+fin
